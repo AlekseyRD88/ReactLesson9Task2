@@ -7,7 +7,7 @@ const App = props => {
   };
   render() 
     return (
-      <UserForm onSubmit={props.createUser}/>
+      <UserForm onSubmit={this.props.createUser}/>
     );
   
 }
