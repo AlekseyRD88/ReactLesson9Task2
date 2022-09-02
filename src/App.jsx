@@ -1,13 +1,13 @@
 import React from 'react';
 import UserForm from './UserForm.jsx';
 
-const App = props => {
+const App = () => {
   createUser = userData => {
     console.log(userData);
   };
   render() 
     return (
-      <UserForm onSubmit={this.props.createUser}/>
+      <UserForm onSubmit={this.createUser}/>
     );
   
 }
