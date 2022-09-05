@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 class UserForm extends Component {
-  state = {
-    name: '',
-    student: '',
-    occupation: '',
-    about: ''
+  constructor(props) {
+    super(props);
+    state = {
+      name: '',
+      student: '',
+      occupation: '',
+      about: ''
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   handleChange = event => {
     const { name, value, checked, type } = event.target;
@@ -15,14 +20,14 @@ class UserForm extends Component {
       [name]: val
     });
   }
-  
   onSubmit = event => {
     event.preventDefault();
-    this.state;
+    this.props.onSubmit(this.state)
   }
+  
   render() {
     return (
-      <form className="login-form" onSubmit={this.props.onSubmit}>
+      <form className="login-form" onSubmit={this.onSubmit}>
         <h1 className="form-title">Profile</h1>
       <div className="form-control">
         <label className="form-label" htmlFor="name">Name</label>

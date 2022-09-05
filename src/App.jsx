@@ -4,10 +4,10 @@ import UserForm from './UserForm.jsx';
 const App = () => {
   createUser = userData => {
     console.log(userData);
-  };
+  }
   render() 
-    return (
-      <UserForm onSubmit={this.createUser}/>
+    return (   
+      <UserForm onSubmit = {this.createUser}/>
     );
   
 }
