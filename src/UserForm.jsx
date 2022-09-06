@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 class UserForm extends Component {
-  constructor(props) {
-    super(props);
     state = {
       name: '',
       student: '',
       occupation: '',
       about: ''
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
+    /*this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);*/
+  
   handleChange = event => {
     const { name, value, checked, type } = event.target;
     const val = type === 'checkbox'
