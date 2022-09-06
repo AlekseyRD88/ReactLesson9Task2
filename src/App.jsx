@@ -5,11 +5,9 @@ const App = () => {
   const createUser = userData => {
     console.log(userData);
   }
-  render() 
     return (   
       <UserForm onSubmit = {createUser}/>
     );
-  
 }
 
 export default App;
